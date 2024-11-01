@@ -13,6 +13,7 @@ import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schemaTypes'
 import {structure} from './sanity/structure'
 import { seoMetaFields } from 'sanity-plugin-seo'
+import SanityThemeIcon from './common/components/sanity/SanityThemeIcon'
 
 export default defineConfig({
   basePath: '/studio',
@@ -20,6 +21,7 @@ export default defineConfig({
   dataset,
   // Add and edit the content schema in the './sanity/schemaTypes' folder
   schema,
+  icon: SanityThemeIcon,
   plugins: [
     structureTool({structure}),
     seoMetaFields(),
