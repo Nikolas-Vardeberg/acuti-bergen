@@ -2,6 +2,7 @@ import { defineType } from "sanity";
 import { Newspaper } from "lucide-react";
 import { seo } from "../other/seo";
 import { blockContent } from "../blocks/blockContent";
+import { blocks } from "../blocks";
 
 export const article = defineType({
     type: "document",
@@ -85,9 +86,12 @@ export const article = defineType({
             ...blockContent,
             group: "general"
         },
-        //BLOCKS
         {
-            name: "test",
+            ...blocks,
+            group: "general"
+        },
+        {
+            name: "bottomline",
             title: "Overskriv bunnlinje",
             type: "boolean",
             group: "bottomline"
